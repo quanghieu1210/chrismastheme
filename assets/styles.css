@@ -1,0 +1,135 @@
+body {
+  font-family: 'Great Vibes', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url('/assets/images/bg2.jpg'); 
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.snowflake {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(calc(100vw + 50%));
+    opacity: 0;
+  }
+}
+
+.santa-container {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.santa {
+  width: 300px;
+  height: 360px;
+  animation: santaMove 5s linear infinite alternate;
+  border: 3px solid #EDEDED;
+  border-radius: 15px;
+}
+
+h1 {
+  color: #F9FCFB; 
+  font-size: 60px;
+}
+
+p {
+  color: #EDEDED; 
+  font-size: 40px;
+  font-weight:bold;
+}
+
+@keyframes santaMove {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+  
+}
+/* Existing CSS styles */
+
+/* Style for the gift box */
+/* Existing CSS styles */
+
+/* Style for the gift box */
+#giftBox {
+  width: 100px;
+  height: 100px;
+  background-image: url('/assets/images/gift.png');
+  background-size: cover;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Style for Santa Popup */
+.santa-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-image: url('/assets/images/bg.jpg');
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+
+.santa-popup img {
+  max-width: 200px;
+  height: auto;
+}
+
+.santa-popup img {
+  max-width: 200px;
+  height: auto;
+}
+.santa-gif img{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-width: 200px;
+}
+.tree-gif img{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: 200px;
+}
+
+
